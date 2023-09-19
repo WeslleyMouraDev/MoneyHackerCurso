@@ -1,0 +1,178 @@
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: url('images/fundo.webp');
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #120f09;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader img {
+  width: 30%;
+  padding-bottom: 20px;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: '';
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #ff9900;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo img {
+  padding-top: 20px;
+  max-width: 20%;
+}
+
+.backgroundVideos {
+  /* margin-bottom: 50px; */
+  padding: 50px 0;
+  border-radius: 10px;
+  border: 2px solid #ff9900;
+  backdrop-filter: blur(20px);
+  width: 70%;
+  color: white;
+  text-align: center;
+}
+
+.backgroundVideosCurso {
+  margin-top: 50px;
+  padding: 50px 0;
+  border-radius: 10px;
+  border: 2px solid #ff9900;
+  backdrop-filter: blur(20px);
+  width: 70%;
+  color: white;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-content {
+  color: white;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+}
+
+.headline-bonus {
+  padding-top: 100px 0;
+}
+
+.video {
+  margin: 20px;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+h2 {
+  margin-top: 80px;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* Regras de mídia para dispositivos móveis */
+@media screen and (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Remova o fundo fixo para dispositivos móveis */
+  }
+
+  .loader {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .loader img {
+    width: 50%;
+    padding-bottom: 30px;
+  }
+
+  header {
+    padding: 10px 0; /* Reduza o espaçamento do cabeçalho */
+  }
+
+  .logo img {
+    padding-top: 50px;
+    max-width: 70%; /* Reduza a largura da logo para 80% */
+  }
+
+  .backgroundVideos {
+    width: 100%;
+  }
+
+  .backgroundVideosCurso {
+    width: 100%;
+  }
+
+  main {
+    padding: 10px; /* Reduza o espaçamento do conteúdo principal */
+  }
+
+  .video {
+    margin: 10px; /* Reduza a margem entre os vídeos */
+  }
+
+  h2 {
+    font-size: 20px; /* Reduza o tamanho da fonte dos títulos */
+  }
+
+  p {
+    font-size: 14px; /* Reduza o tamanho da fonte do texto */
+  }
+}
